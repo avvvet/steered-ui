@@ -31,6 +31,9 @@
 			</nav>
 			<span class="meta">MIT License · v1.0.0</span>
 		</div>
+		<div class="author">
+			built by <a href="https://github.com/avvvet" target="_blank">Awet Tsegazeab</a>
+		</div>
 	</div>
 </footer>
 
@@ -87,6 +90,24 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 1rem;
+	}
+
+	.author {
+		font-family: var(--mono);
+		font-size: 0.68rem;
+		color: var(--hint);
+		margin-top: 1rem;
+		text-align: center;
+	}
+
+	.author a {
+		color: var(--muted);
+		text-decoration: none;
+		transition: color 0.12s ease;
+	}
+
+	.author a:hover {
+		color: var(--text);
 	}
 
 	.copy, .meta {

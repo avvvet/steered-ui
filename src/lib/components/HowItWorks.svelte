@@ -4,7 +4,7 @@
 			<div class="step">
 				<span class="num">01</span>
 				<h3>Run</h3>
-				<p>Runs on your local machine — wherever kubectl runs. Nothing installs on the cluster.</p>
+				<p>Runs on your machine. Works wherever kubectl is configured. Zero configuration. Zero cluster footprint.</p>
 			</div>
 			<div class="divider"></div>
 			<div class="step">
@@ -16,7 +16,7 @@
 			<div class="step">
 				<span class="num">03</span>
 				<h3>Fix</h3>
-				<p>Get the exact kubectl command. Confirm and apply.</p>
+				<p>Steered tells you exactly what's wrong and how to fix it. You run the command.</p>
 			</div>
 		</div>
 	</div>
