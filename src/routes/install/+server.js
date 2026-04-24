@@ -1,9 +1,11 @@
+import { PUBLIC_API_TOKEN } from '$env/static/public'
+
 export async function GET({ request }) {
 	fetch('https://analytics.steered.dev/track', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			'Authorization': `Bearer ${process.env.PUBLIC_API_TOKEN}`
+			'Authorization': `Bearer ${PUBLIC_API_TOKEN}`
 		},
 		body: JSON.stringify({
 			type: 'install_download',
