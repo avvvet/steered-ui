@@ -1,10 +1,13 @@
-const ANALYTICS_URL = 'https://analytics.steered.dev'
+import { PUBLIC_ANALYTICS_URL, PUBLIC_API_TOKEN } from '$env/static/public'
 
 export async function track(type, extra = {}) {
 	try {
-		await fetch(`${ANALYTICS_URL}/track`, {
+		await fetch(`${PUBLIC_ANALYTICS_URL}/track`, {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
+			headers: {
+				'Content-Type': 'application/json',
+				'Authorization': `Bearer ${PUBLIC_API_TOKEN}`
+			},
 			body: JSON.stringify({
 				type,
 				referrer: document.referrer,
@@ -13,6 +16,6 @@ export async function track(type, extra = {}) {
 			})
 		})
 	} catch {
-		// silent fail — never break user experience
+		// silent fail
 	}
 }
