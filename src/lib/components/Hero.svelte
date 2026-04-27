@@ -13,6 +13,7 @@
 
 <section class="hero">
 	<div class="inner">
+	    <img src="/logo.png" alt="steered" class="logo" />
 		<div class="wordmark">S T E E R E D</div>
 		<p class="desc">It analyzes. You fix.</p>
 		<p class="desc2">Zero setup. No dependencies. No cloud. No database.</p>
@@ -50,6 +51,13 @@
 	.inner {
 		max-width: 560px;
 	}
+	.logo {
+		width: 48px;
+		height: 48px;
+		object-fit: contain;
+		margin-bottom: 1rem;
+		opacity: 0.9;
+	}
 	.wordmark {
 		font-family: var(--mono);
 		font-size: clamp(1.2rem, 4vw, 1.8rem);
@@ -66,20 +74,20 @@
 		margin-bottom: 0.75rem;
 		font-style: italic;
 	}
-.desc {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 0.2rem;
-}
+	.desc {
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: var(--text);
+		margin-bottom: 0.2rem;
+	}
 
-.desc2 {
-    font-size: 0.78rem;
-    font-family: var(--mono);
-    color: var(--muted);
-    margin-bottom: 1rem;
-    letter-spacing: 0.02em;
-}
+	.desc2 {
+		font-size: 0.78rem;
+		font-family: var(--mono);
+		color: var(--muted);
+		margin-bottom: 1rem;
+		letter-spacing: 0.02em;
+	}
 	.pills {
 		font-family: var(--mono);
 		font-size: 0.72rem;
