@@ -16,7 +16,7 @@ export async function GET({ request }) {
 	return new Response(null, {
 		status: 302,
 		headers: {
-			location: 'https://raw.githubusercontent.com/avvvet/steered/main/install.sh'
+			location: 'https://raw.githubusercontent.com/steereddev/steered/main/install.sh'
 		}
 	})
 }

@@ -3,7 +3,7 @@
 
 	function handleGitHub() {
 		track('github_click')
-		window.open('https://github.com/avvvet/steered', '_blank')
+		window.open('https://github.com/steereddev/steered', '_blank')
 	}
 </script>
 
