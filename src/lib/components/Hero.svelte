@@ -1,14 +1,10 @@
 <script>
 	import { track } from '$lib/analytics.js'
-
 	function handleGitHub() {
 		track('github_click')
 		window.open('https://github.com/steereddev/steered', '_blank')
 	}
-
-	function scrollToDemo() {
-		document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' })
-	}
+	
 </script>
 
 <section class="hero">
@@ -17,7 +13,7 @@
 			<img src="/logo.png" alt="steered" class="logo" />
 			S T E E R E D
 		</div>
-		<p class="desc">It analyzes. You fix.</p>
+		<p class="desc">It analyzes. It guides. You fix.</p>
 		<p class="desc2">Zero setup. No dependencies. No cloud. No database.</p>
 		<p class="pills">
 			<span>Local</span>
@@ -33,9 +29,13 @@
 				</svg>
 				Star on GitHub
 			</button>
-			<button class="btn-secondary" on:click={scrollToDemo}>
-				Watch Demo ↓
-			</button>
+			
+			<span class="trust">
+				<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+				</svg>
+				Read-only · By design
+			</span>
 		</div>
 	</div>
 </section>
@@ -65,18 +65,9 @@
 		justify-content: center;
 		gap: 0.75rem;
 	}
-
 	.logo {
 		height: 64px;
 		object-fit: contain;
-	}
-	.tagline {
-		font-family: var(--sans);
-		font-size: 0.875rem;
-		font-weight: 300;
-		color: var(--muted);
-		margin-bottom: 0.75rem;
-		font-style: italic;
 	}
 	.desc {
 		font-size: 0.95rem;
@@ -84,7 +75,6 @@
 		color: var(--text);
 		margin-bottom: 0.2rem;
 	}
-
 	.desc2 {
 		font-size: 0.78rem;
 		font-family: var(--mono);
@@ -102,12 +92,13 @@
 	.dot {
 		margin: 0 0.4rem;
 	}
-	.actions {
-		display: flex;
-		gap: 0.6rem;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
+.actions {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 	button {
 		font-family: var(--mono);
 		font-size: 0.78rem;
@@ -136,5 +127,22 @@
 	.btn-secondary:hover {
 		border-color: var(--hint);
 		color: var(--text);
+	}
+	.trust {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.65rem;
+		color: #27500a;
+		background: #eaf3de;
+		border: 0.5px solid #97c459;
+		border-radius: 99px;
+		padding: 0.28rem 0.8rem;
+		letter-spacing: 0.03em;
+		font-family: var(--mono);
+	}
+	.trust svg {
+		color: #3b6d11;
+		flex-shrink: 0;
 	}
 </style>
