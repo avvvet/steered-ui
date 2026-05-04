@@ -128,21 +128,22 @@
 		border-color: var(--hint);
 		color: var(--text);
 	}
-	.trust {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.35rem;
-		font-size: 0.65rem;
-		color: #27500a;
-		background: #eaf3de;
-		border: 0.5px solid #97c459;
-		border-radius: 99px;
-		padding: 0.28rem 0.8rem;
-		letter-spacing: 0.03em;
-		font-family: var(--mono);
-	}
+.trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.65rem;
+    color: var(--muted);
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 99px;
+    padding: 0.28rem 0.8rem;
+    letter-spacing: 0.03em;
+    font-family: var(--mono);
+    white-space: nowrap;
+}
 	.trust svg {
-		color: #3b6d11;
-		flex-shrink: 0;
-	}
+    color: var(--green);
+    flex-shrink: 0;
+}
 </style>
